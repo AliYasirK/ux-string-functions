@@ -11,6 +11,14 @@
 function isEmptyString(string) {
   let result;
   // Add your code here.
+
+if (string == ""){
+  result = true;
+}
+else {
+   result = false;
+}
+
   return result;
 }
 
@@ -40,6 +48,16 @@ console.log(isEmptyString(" ") === false);
 function containsWordJava(text) {
   let result;
   // Add your code here.
+
+let finalText = text.toLowerCase()
+
+
+if (finalText.includes("java")){
+  result = true
+}
+else{
+  result = false
+}
   return result;
 }
 
@@ -54,8 +72,7 @@ console.log(
 );
 console.log("* Check message with word");
 console.log(
-  containsWordJava("Hello this is a message about javascript!") === true
-);
+  containsWordJava("Hello this is a message about javascript!") === true);
 console.log("* Check all caps message");
 console.log(containsWordJava("JAVA IS FUN :D") === true);
 
@@ -69,14 +86,20 @@ console.log(containsWordJava("JAVA IS FUN :D") === true);
 
 function trimSentence(text, maxLength) {
   // Add your code here.
-  return text;
+  let textLength = maxLength - 4;
+  text = `${text.slice(0, textLength)}…`;
+
+  if (textLength == 16){
+    return true
+  }
+  
 }
 
 /* 
   -------TESTS---------------------------------------------------------------
   Run these commands to make sure you did it right. They should all be true.
 */
-console.log("-----Tests for Exercise One-----");
+console.log("-----Tests for Exercise Three-----");
 console.log("* Check Long sentence");
 console.log(
   trimSentence("The fox jumped over the fence to get to the farm.", 16) ===
@@ -99,15 +122,17 @@ console.log(trimSentence("Short", 16) === "Short");
 */
 
 function trimSentence(text, maxLength) {
-  // Add your code here.
-  return text;
+  if (text.length > maxLength) {
+      return text.substring(0, maxLength - 3) + "...";
+  } else {
+      return text;
+  }
 }
-
 /* 
   -------TESTS---------------------------------------------------------------
   Run these commands to make sure you did it right. They should all be true.
 */
-console.log("-----Tests for Exercise One-----");
+console.log("-----Tests for Exercise Four-----");
 console.log("* Check Long sentence");
 console.log(
   trimSentence("The fox jumped over the fence to get to the farm.", 16) ===
