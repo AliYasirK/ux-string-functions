@@ -116,7 +116,7 @@ console.log(trimSentence("Short", 16) === "Short");
 /* ------------------------------------------------
   Exercise Four
 
-  Given the text, the goal is to limit the number of characters to maxLength and add an ellipsis "..." to the end.
+  Given the text,the goal is to limit the number of characters to maxLength and add an ellipsis "..." to the end.
   Note that the length of the string should be maxLength including the ellipsis.  This means you'll have to subtract the lenght of the ellipsis fom the maxLength to know how many characters there should be.
   Hint: Look at the "slice" method.  You can set the first argument to zero to make it start at the beginning of the string.   (Watch out that slice returns a new string! You need to assign it to something)
 */
